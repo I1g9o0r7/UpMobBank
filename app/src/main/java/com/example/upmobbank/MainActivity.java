@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPhone = findViewById(R.id.editTextPhone);
         editTextPass = findViewById(R.id.editTextPass);
         buttonEnter = findViewById(R.id.buttonEnter);
-        buttonRegist = findViewById(R.id.buttonRegist);
+//        buttonRegist = findViewById(R.id.buttonRegist);
 
 
         buttonEnter.setOnClickListener(new View.OnClickListener() {
@@ -41,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonRegist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        buttonRegist.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
     }
 
 
