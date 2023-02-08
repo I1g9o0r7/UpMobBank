@@ -10,43 +10,57 @@
         android:id="@+id/editTextPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="200dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/editTextPhone"
         android:inputType="phone"
+        android:minHeight="48dp"
+        android:rotationX="1"
+        android:rotationY="30"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/editTextPass"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:rotationY="30"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:rotationX="-15"
+        android:rotationY="-30"
         android:text="@string/buttonEnter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonRegist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="goToRegistrationActivity"
+        android:rotationX="-20"
+        android:rotationY="-30"
         android:text="@string/buttonRegist"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
