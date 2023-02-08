@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UpMobBank</string>
+    <string name="editTextPhone">Phone</string>
+    <string name="editTextPass">Password</string>
+    <string name="buttonEnter">Enter</string>
+    <string name="buttonRegist">Registration</string>
 </resources>
