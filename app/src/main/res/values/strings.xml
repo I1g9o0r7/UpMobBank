@@ -4,4 +4,13 @@
     <string name="editTextPass">Password</string>
     <string name="buttonEnter">Enter</string>
     <string name="buttonRegist">Registration</string>
+
+    <string name="createAccount">Form for create account</string>
+    <string name="inputFirstName">Input your first name</string>
+    <string name="inputLastName">Input your last name</string>
+    <string name="inputBirthDate">Input your birth date (dd.mm.yyyy)</string>
+    <string name="inputPhone">Input your number of the phone</string>
+    <string name="cretingPassword">Create the password</string>
+
+
 </resources>
