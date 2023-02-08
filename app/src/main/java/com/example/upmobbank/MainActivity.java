@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
         buttonEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(editTextPhone.getText().toString().equals("123")){
-                    showAlertInfo("номер телефона неверный");
-                }
+//                if(editTextPhone.getText().toString().equals("123")){
+//                    showAlertInfo("номер телефона неверный");
+//                }
+                goToFunctionActivity(view);
             }
         });
 
@@ -62,11 +63,14 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
-
+    public void goToFunctionActivity(View activ){
+        Intent intentToFunAct = new Intent(this, FunctionActivity.class);
+        startActivity(intentToFunAct);
+    }
 
     public void goToRegistrationActivity(View activ){
-        Intent intent = new Intent(this, RegistrationActivity.class);
-        startActivity(intent);
+        Intent intentToRegAct = new Intent(this, RegistrationActivity.class);
+        startActivity(intentToRegAct);
     }
 
 
