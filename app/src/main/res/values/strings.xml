@@ -11,6 +11,9 @@
     <string name="inputBirthDate">Input your birth date (dd.mm.yyyy)</string>
     <string name="inputPhone">Input your number of the phone</string>
     <string name="cretingPassword">Create the password</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="uaFragm">UA</string>
+    <string name="usFragm">US</string>
+    <string name="euFragm">EU</string>
 
 </resources>
