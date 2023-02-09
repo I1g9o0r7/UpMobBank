@@ -5,12 +5,21 @@
     <string name="buttonEnter">Enter</string>
     <string name="buttonRegist">Registration</string>
 
-    <string name="createAccount">Form for create account</string>
+    <string name="formCreateAccount">Form for create account</string>
     <string name="inputFirstName">Input your first name</string>
     <string name="inputLastName">Input your last name</string>
     <string name="inputBirthDate">Input your birth date (dd.mm.yyyy)</string>
     <string name="inputPhone">Input your number of the phone</string>
     <string name="cretingPassword">Create the password</string>
+
+    <string name="firstName">first name</string>
+    <string name="lastName">last name</string>
+    <string name="bithDate">dd.mm.yyyy</string>
+    <string name="phone">phone</string>
+    <string name="password">password</string>
+    <string name="createAccount">create account</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="uaFragm">UA</string>
     <string name="usFragm">US</string>

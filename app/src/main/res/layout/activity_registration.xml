@@ -11,7 +11,7 @@
         android:layout_width="349dp"
         android:layout_height="39dp"
         android:layout_marginTop="30dp"
-        android:text="@string/createAccount"
+        android:text="@string/formCreateAccount"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:layout_marginTop="10dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="first name"
+        android:hint="@string/firstName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:text="@string/inputLastName"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
         tools:ignore="TextSizeCheck" />
@@ -63,11 +63,12 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="last name"
+        android:hint="@string/lastName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView5"
@@ -87,11 +88,12 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="dd.mm.yyyy"
+        android:hint="@string/bithDate"
         android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView6"
@@ -111,11 +113,12 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="phone"
+        android:hint="@string/phone"
         android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView7"
@@ -135,8 +138,9 @@
         android:layout_marginStart="30dp"
 
         android:layout_marginTop="10dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="25dp"
-        android:text="Create account"
+        android:text="@string/createAccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
