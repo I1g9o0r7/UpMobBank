@@ -29,25 +29,25 @@ public class MainActivity extends AppCompatActivity {
         editTextPhone = findViewById(R.id.editTextPhone);
         editTextPass = findViewById(R.id.editTextPass);
         buttonEnter = findViewById(R.id.buttonEnter);
-//        buttonRegist = findViewById(R.id.buttonRegist);
+        buttonRegist = findViewById(R.id.buttonRegist);
 
 
         buttonEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(editTextPhone.getText().toString().equals("123")){
-//                    showAlertInfo("номер телефона неверный");
-//                }
+                if(editTextPhone.getText().toString().equals("123")){
+                    showAlertInfo("номер телефона неверный");
+                }
                 goToFunctionActivity(view);
             }
         });
 
-//        buttonRegist.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+        buttonRegist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToRegistrationActivity(view);
+            }
+        });
     }
 
 
@@ -73,43 +73,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intentToRegAct);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-
-    }
 }
