@@ -6,47 +6,127 @@
     android:layout_height="match_parent"
     tools:context=".FunctionActivity">
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Exchange Rates:"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="41"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="43"
+                android:textSize="17dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonShowBalanceUA"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/uaFragm"
+                android:textSize="20dp"
+                app:cornerRadius="15sp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/buttonShowBalanceUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/usFragm"
+                android:textSize="20dp"
+                app:cornerRadius="15sp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/buttonShowBalanceEU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/euFragm"
+                android:textSize="20dp"
+                app:cornerRadius="15sp"
+                tools:ignore="VisualLintButtonSize" />
+        </TableRow>
+
+    </TableLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="125dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/buttonShowBalanceUA"
-            style="?android:attr/buttonBarButtonStyle"
+        <TextView
+            android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/uaFragm"
-            tools:ignore="VisualLintButtonSize" />
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Account number: " />
 
-        <Button
-            android:id="@+id/buttonShowBalanceUS"
-            style="?android:attr/buttonBarButtonStyle"
+        <TextView
+            android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/usFragm"
-            tools:ignore="VisualLintButtonSize" />
-
-        <Button
-            android:id="@+id/buttonShowBalanceEU"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/euFragm"
-            tools:ignore="VisualLintButtonSize" />
+            android:textSize="20dp"
+            android:text="0000 0000 0000 0000" />
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/frameLayoutForShowBalance"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
