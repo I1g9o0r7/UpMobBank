@@ -7,13 +7,13 @@
     tools:context=".FunctionActivity">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewExchangeRates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Exchange Rates:"
-        android:textSize="19dp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,31 +32,31 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textViewUARates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="1"
-                android:textSize="17dp" />
+                android:text="0"
+                android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textViewUSRates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="41"
-                android:textSize="17dp" />
+                android:text="0"
+                android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textViewEURates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="43"
-                android:textSize="17dp" />
+                android:text="0"
+                android:textSize="17sp" />
         </TableRow>
 
         <TableRow
@@ -65,33 +65,39 @@
 
             <Button
                 android:id="@+id/buttonShowBalanceUA"
-                android:layout_width="79dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:text="@string/uaFragm"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:cornerRadius="15sp"
-                tools:ignore="VisualLintButtonSize" />
+                tools:ignore="VisualLintButtonSize,TextSizeCheck" />
 
             <Button
                 android:id="@+id/buttonShowBalanceUS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:text="@string/usFragm"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:cornerRadius="15sp"
-                tools:ignore="VisualLintButtonSize" />
+                tools:ignore="VisualLintButtonSize,TextSizeCheck" />
 
             <Button
                 android:id="@+id/buttonShowBalanceEU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:text="@string/euFragm"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:cornerRadius="15sp"
-                tools:ignore="VisualLintButtonSize" />
+                tools:ignore="VisualLintButtonSize,TextSizeCheck" />
         </TableRow>
 
     </TableLayout>
@@ -99,34 +105,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="150dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/textViewAccNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
             android:gravity="center"
-            android:text="Account number: " />
+            android:text="Account number: "
+            android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/textViewCodeAcc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="0000 0000 0000 0000" />
+            android:text="0000 0000 0000 0000"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/frameLayoutForShowBalance"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,15 @@
     <string name="usFragm">US</string>
     <string name="euFragm">EU</string>
 
+    <string name="uaSymbol">₴</string>
+    <string name="usSymbol">$</string>
+    <string name="euSymbol">€</string>
+    Symbol
+
+    <string name="balanceUA">00.0</string>
+    <string name="balanceUS">00.0</string>
+    <string name="balanceEU">00.0</string>
+
 
 
 
