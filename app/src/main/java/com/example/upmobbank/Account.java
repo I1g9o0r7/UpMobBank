@@ -1,5 +1,9 @@
 package com.example.upmobbank;
 
+import android.text.Editable;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Account {
@@ -8,7 +12,7 @@ public class Account {
     private String password;
     private String firstName, lastName;
 
-    private Date bithDate;
+    private Calendar bithDate;
 
     private double balanceUA, balanceUS, balanceEU;
 
@@ -32,7 +36,7 @@ public class Account {
         return lastName;
     }
 
-    public Date getBithDate() {
+    public Calendar getBithDate() {
         return bithDate;
     }
 
@@ -48,7 +52,9 @@ public class Account {
         return balanceEU;
     }
 
-    public Account(long codeAcc, String phone, String password, String firstName, String lastName, Date bithDate, double balanceUA, double balanceUS, double balanceEU) {
+
+    // For enter account
+    public Account(long codeAcc, String phone, String password, String firstName, String lastName, Calendar bithDate, double balanceUA, double balanceUS, double balanceEU) {
         this.codeAcc = codeAcc;
         this.phone = phone;
         this.password = password;
@@ -59,11 +65,19 @@ public class Account {
         this.balanceUS = balanceUS;
         this.balanceEU = balanceEU;
 
-//        bithDate
+    }
 
-
-
-
+    // For Created Account
+    public Account(String phone, String password, String firstName, String lastName, Calendar bithDate) { //long codeAcc,
+        this.codeAcc = 1;
+        this.phone = phone;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.bithDate = bithDate;
+        this.balanceUA = 1000;
+        this.balanceUS = 1000;
+        this.balanceEU = 1000;
 
     }
 }

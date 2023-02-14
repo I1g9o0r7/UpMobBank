@@ -40,6 +40,7 @@
     <string name="setings">Setings</string>
 
     <string name="send">Send</string>
+    <string name="accountNumber">Account number:</string>
 
 
 </resources>

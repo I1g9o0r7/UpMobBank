@@ -35,7 +35,7 @@ public class SendMoneyActivity extends AppCompatActivity {
         spinnerMethodsSendChoice = findViewById(R.id.spinnerMethodSendСhoice);
         button = findViewById(R.id.buttonSendMoney);
         editTextMethodSendMoney = findViewById(R.id.editTextMethodSendMoney);
-
+        textViewAmountOfMoney = findViewById(R.id.textViewAmountOfMoney);
 
         choiceCurrency();
         choiceMethodSend();
@@ -56,14 +56,23 @@ public class SendMoneyActivity extends AppCompatActivity {
 
                 // Получаем выбранный объект
                 String item = (String)parent.getItemAtPosition(position);
-                editTextMethodSendMoney.setHint(item);
+
+                if(item.equals("UA"))
+                    textViewAmountOfMoney.setText("" + MainActivity.acc.getBalanceUA());
+                if(item.equals("US"))
+                    textViewAmountOfMoney.setText("" + MainActivity.acc.getBalanceUS());
+                if(item.equals("EU"))
+                    textViewAmountOfMoney.setText("" + MainActivity.acc.getBalanceEU());
+
+
+                //editTextMethodSendMoney.setHint(item);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         };
-        spinnerMethodsSendChoice.setOnItemSelectedListener(itemSelectedListener);
+        spinnerCurrencyСhoice.setOnItemSelectedListener(itemSelectedListener);
 
 
     }

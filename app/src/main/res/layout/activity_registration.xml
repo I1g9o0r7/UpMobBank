@@ -41,6 +41,7 @@
         android:hint="@string/firstName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:text="First name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textForInputFirstName" />
 
@@ -62,13 +63,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/lastName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:text="Last name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textForInputLasttName"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textForInputLasttName" />
 
     <TextView
         android:id="@+id/textForInputBithDate"
@@ -93,18 +95,19 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerInputMonth" />
 
     <EditText
-        android:id="@+id/editTextPhone2"
+        android:id="@+id/editTextForPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/phone"
         android:inputType="phone"
         android:minHeight="48dp"
+        android:text="+380679754451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textForInputPhone"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textForInputPhone" />
 
     <TextView
         android:id="@+id/textForInputPassword"
@@ -115,10 +118,10 @@
         android:text="@string/cretingPassword"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextForPhone" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextForPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -129,6 +132,7 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:text="123456789"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textForInputPassword" />
 

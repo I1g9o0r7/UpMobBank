@@ -11,8 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 
 public class MainActivity extends AppCompatActivity {
+    public static Account acc;
 
     private EditText editTextPhone;
     private EditText editTextPass;
@@ -35,10 +41,39 @@ public class MainActivity extends AppCompatActivity {
         buttonEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(editTextPhone.getText().toString().equals("123")){
-                    showAlertInfo("номер телефона неверный");
+//                if(editTextPhone.getText().toString().equals("123")){
+////                    showAlertInfo("номер телефона неверный");
+//                    Toast.makeText(getBaseContext(), "Номер телефона неверный", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    goToFunctionActivity(view);
+//                }
+//
+//
+//                RegistrationActivity.bithDate = new GregorianCalendar();
+//                RegistrationActivity.bithDate.set(Calendar.DAY_OF_MONTH, 28);
+//                RegistrationActivity.bithDate.set(Calendar.MONTH, 3);
+//                RegistrationActivity.bithDate.set(Calendar.YEAR, 2001);
+//                acc = new Account(1234123412341234l,"147" , "123" , "Igor", "Bilou", RegistrationActivity.bithDate, 111111, 222222, 333333);
+
+                try{
+                    String url = "jdbc:mysql://localhost/dbUpMobBank"; // http://127.0.0.1/openserver/phpmyadmin/index.php?route=/database/structure&db=dbUpMobBank    jdbc:mysql://localhost/UpMobBank
+                    String username = "root";
+                    String password = "";
+                    Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+                    try (Connection conn = DriverManager.getConnection(url, username, password)){
+
+                        System.out.println("Connection to Store DB succesfull!");
+                    }
                 }
-                goToFunctionActivity(view);
+                catch(Exception ex){
+                    System.out.println("Connection failed...");
+
+                    System.out.println(ex);
+                }
+
+
+
+
             }
         });
 
@@ -55,14 +90,12 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 
-    private void showAlertInfo(String text){
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Error").setMessage(text);
-
-
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
+//    private void showAlertInfo(String text){
+//        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//        builder.setTitle("Error").setMessage(text);
+//        AlertDialog alert = builder.create();
+//        alert.show();
+//    }
     public void goToFunctionActivity(View activ){
         Intent intentToFunAct = new Intent(this, FunctionActivity.class);
         startActivity(intentToFunAct);
