@@ -6,9 +6,9 @@
     <string name="buttonRegist">Registration</string>
 
     <string name="formCreateAccount">Form for create account</string>
-    <string name="inputFirstName">Input your first name</string>
-    <string name="inputLastName">Input your last name</string>
-    <string name="inputBirthDate">Input your birth date (dd.mm.yyyy)</string>
+    <string name="inputFirstName">Input</string>
+    <string name="inputLastName">Input</string>
+    <string name="inputBirthDate">Input your birth date</string>
     <string name="inputPhone">Input your number of the phone</string>
     <string name="cretingPassword">Create the password</string>
 
@@ -28,16 +28,18 @@
     <string name="uaSymbol">₴</string>
     <string name="usSymbol">$</string>
     <string name="euSymbol">€</string>
-    Symbol
 
     <string name="balanceUA">00.0</string>
     <string name="balanceUS">00.0</string>
     <string name="balanceEU">00.0</string>
+    <string name="yourBalance">Your balance: </string>
 
+    <string name="sendMoney">Send money</string>
+    <string name="blocked">Blocked</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="setings">Setings</string>
 
-
-
-
+    <string name="send">Send</string>
 
 
 </resources>
