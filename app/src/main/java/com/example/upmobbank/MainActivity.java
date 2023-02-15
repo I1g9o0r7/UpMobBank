@@ -30,19 +30,21 @@ public class MainActivity extends AppCompatActivity {
         editTextPass = findViewById(R.id.editTextPass);
         buttonEnter = findViewById(R.id.buttonEnter);
         buttonRegist = findViewById(R.id.buttonRegist);
+        editTextPhone.setText("0");
+        editTextPass.setText("0");
 
+        new DBUpMobBank(this, editTextPhone.getText().toString(), editTextPass.getText().toString()).execute();
 
         buttonEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(editTextPhone.getText().toString().equals("123")){
-////                    showAlertInfo("номер телефона неверный");
-//                    Toast.makeText(getBaseContext(), "Номер телефона неверный", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    goToFunctionActivity(view);
-//                }
-//
-//
+                if(editTextPhone.getText().toString().equals("123")){
+//                    showAlertInfo("номер телефона неверный");
+                    Toast.makeText(getBaseContext(), "Номер телефона неверный", Toast.LENGTH_SHORT).show();
+                } else {
+                    goToFunctionActivity(view);
+                }
+
 //                RegistrationActivity.bithDate = new GregorianCalendar();
 //                RegistrationActivity.bithDate.set(Calendar.DAY_OF_MONTH, 28);
 //                RegistrationActivity.bithDate.set(Calendar.MONTH, 3);
@@ -50,9 +52,18 @@ public class MainActivity extends AppCompatActivity {
 //                acc = new Account(1234123412341234l,"147" , "123" , "Igor", "Bilou", RegistrationActivity.bithDate, 111111, 222222, 333333);
 
 
-                String login = editTextPhone.getText().toString();
-                String password = editTextPass.getText().toString();
-                String res = new DBUpMobBank(this).execute(login,password);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             }
@@ -65,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
 //    private void errorPhone(String text){
 //        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();

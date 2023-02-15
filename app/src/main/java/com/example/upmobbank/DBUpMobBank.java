@@ -1,61 +1,40 @@
 package com.example.upmobbank;
 
-//import java.lang.reflect.InvocationTargetException;
-//import java.sql.Connection;
-//import java.sql.DriverManager;
-//import java.sql.SQLException;
-//
-//public class DBUpMobBank {
-//    private final String HOST = "localhost"; // http://127.0.0.1/openserver/phpmyadmin/index.php?route=/sql&db=dbUpMobBank&table=Accounts&pos=0
-//    private final String PORT = "3306";
-//    private final String DB_NAME = "dbUpMobBank";
-//    private final String LOGIN = "root";
-//    private final String PASS = "";
-//
-//    private Connection dbConnection;
-//
-//    private Connection getDBConn() throws ClassCastException, SQLException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
-//        String conn = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB_NAME;
-//        Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-//
-//        dbConnection = DriverManager.getConnection(conn, LOGIN, PASS);
-//
-//        return dbConnection;
-//    }
-//}
-
-
 import android.content.Context;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class DBUpMobBank extends AsyncTask{
-    private Context context;
+public class DBUpMobBank extends AsyncTask<String, Void, String> {
 
-    public DBUpMobBank(Context context) {
+    private Context context;
+    private String phone;
+    private String pass;
+
+    public DBUpMobBank(Context context, String phone, String pass) {
         this.context = context;
+        this.phone = phone;
+        this.pass = pass;
     }
 
+
     @Override
-    protected String doInBackground(Object[] objects) {
+    protected String doInBackground(String... arg0) {
 
-        try{
+        try {
 
 
-            String username = (String)objects[0];
-            String password = (String)objects[1];
-
-            String link="http://myphpmysqlweb.hostei.com/loginpost.php";
-            String data  = URLEncoder.encode("phone", "UTF-8") + "=" +
-                    URLEncoder.encode(username, "UTF-8");
-            data += "&" + URLEncoder.encode("password", "UTF-8") + "=" +
-                    URLEncoder.encode(password, "UTF-8");
+            String link="http://localhost/php/connectToDB.php";
+            String  data  = URLEncoder.encode("phone", "UTF-8") + "=" + URLEncoder.encode(phone, "UTF-8");
+                    data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(pass, "UTF-8");
 
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
@@ -66,14 +45,15 @@ public class DBUpMobBank extends AsyncTask{
             wr.write( data );
             wr.flush();
 
-            BufferedReader reader = new BufferedReader(new
-                    InputStreamReader(conn.getInputStream()));
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
             StringBuilder sb = new StringBuilder();
             String line = null;
 
             // Read Server Response
             while((line = reader.readLine()) != null) {
+                System.out.println("----------------------------------------------------" + line); //------------------------------------------------------------------------
                 sb.append(line);
                 break;
             }
@@ -82,14 +62,102 @@ public class DBUpMobBank extends AsyncTask{
 
 
 
-        } catch(Exception e){
-            return new String("Exception: " + e.getMessage());
+
+
+
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-
-    }
-    protected void onPreExecute(){
     }
 
+    @Override
+    protected void onPostExecute(String result) {
+
+        System.out.println("----------------------------------------------------------------------"+result);
+        super.onPostExecute(result);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    private Context context;
+//
+//    public DBUpMobBank(Context context) {
+//        this.context = context;
+//    }
+//
+//    @Override
+//    protected String doInBackground(Object[] objects) {
+//
+//        try{
+//
+//            String phone = (String)objects[0];
+//            String password = (String)objects[1];
+//
+//            String link="http://localhost/php/connectToDB.php";
+//            String data  = URLEncoder.encode("phone", "UTF-8") + "=" +
+//                    URLEncoder.encode(phone, "UTF-8");
+//            data += "&" + URLEncoder.encode("password", "UTF-8") + "=" +
+//                    URLEncoder.encode(password, "UTF-8");
+//
+//            URL url = new URL(link);
+//            URLConnection conn = url.openConnection();
+//
+//            conn.setDoOutput(true);
+//            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+//
+//            wr.write( data );
+//            wr.flush();
+//
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//
+//            StringBuilder sb = new StringBuilder();
+//            String line = null;
+//
+//            // Read Server Response
+//            while((line = reader.readLine()) != null) {
+//                System.out.println("----------------------------------------------------" + line); //------------------------------------------------------------------------
+//                sb.append(line);
+//                //break;
+//            }
+//
+//            return sb.toString();
+//
+//        } catch(Exception e){
+//            return new String("Exception: " + e.getMessage());
+//        }
+//
+//    }
+//    protected void onPreExecute(){
+//    }
+
 
 
