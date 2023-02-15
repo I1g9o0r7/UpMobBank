@@ -32,7 +32,7 @@ public class DBUpMobBank extends AsyncTask<String, Void, String> {
         try {
 
 
-            String link="http://localhost/php/connectToDB.php";
+            String link="http://192.168.3.4/connectToDB.php";
             String  data  = URLEncoder.encode("phone", "UTF-8") + "=" + URLEncoder.encode(phone, "UTF-8");
                     data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(pass, "UTF-8");
 

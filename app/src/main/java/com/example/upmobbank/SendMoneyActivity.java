@@ -1,7 +1,5 @@
 package com.example.upmobbank;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +10,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class SendMoneyActivity extends AppCompatActivity {
 
     private Spinner spinnerCurrencyСhoice, spinnerMethodsSendChoice;
-    private TextView textViewAmountOfMoney;
+    private TextView textViewAmountOfMoney, textViewSimbolBalance;
     private EditText editTextMethodSendMoney;
     private String[] currency = { "UA", "US", "EU"};
 
@@ -36,6 +36,7 @@ public class SendMoneyActivity extends AppCompatActivity {
         button = findViewById(R.id.buttonSendMoney);
         editTextMethodSendMoney = findViewById(R.id.editTextMethodSendMoney);
         textViewAmountOfMoney = findViewById(R.id.textViewAmountOfMoney);
+        textViewSimbolBalance = findViewById(R.id.textViewSimbolBalance);
 
         choiceCurrency();
         choiceMethodSend();
@@ -57,14 +58,18 @@ public class SendMoneyActivity extends AppCompatActivity {
                 // Получаем выбранный объект
                 String item = (String)parent.getItemAtPosition(position);
 
-                if(item.equals("UA"))
+                if(item.equals("UA")){
                     textViewAmountOfMoney.setText("" + MainActivity.acc.getBalanceUA());
-                if(item.equals("US"))
+                    textViewSimbolBalance.setText(R.string.uaSymbol);
+                }
+                if(item.equals("US")){
                     textViewAmountOfMoney.setText("" + MainActivity.acc.getBalanceUS());
-                if(item.equals("EU"))
+                    textViewSimbolBalance.setText(R.string.usSymbol);
+                }
+                if(item.equals("EU")){
                     textViewAmountOfMoney.setText("" + MainActivity.acc.getBalanceEU());
-
-
+                    textViewSimbolBalance.setText(R.string.euSymbol);
+                }
                 //editTextMethodSendMoney.setHint(item);
             }
 

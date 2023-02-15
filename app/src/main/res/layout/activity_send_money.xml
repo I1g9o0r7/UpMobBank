@@ -69,7 +69,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Amount Of Money"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMethodSendMoney" />
@@ -93,4 +93,13 @@
         android:text="0"
         app:layout_constraintStart_toEndOf="@+id/textViewBalanceForSend"
         app:layout_constraintTop_toBottomOf="@+id/spinnerCurrencyСhoice" />
+
+    <TextView
+        android:id="@+id/textViewSimbolBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewAmountOfMoney"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerMethodSendСhoice" />
 </androidx.constraintlayout.widget.ConstraintLayout>

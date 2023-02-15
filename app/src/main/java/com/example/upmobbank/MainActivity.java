@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 
 public class MainActivity extends AppCompatActivity {
     public static Account acc;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPhone.setText("0");
         editTextPass.setText("0");
 
-        new DBUpMobBank(this, editTextPhone.getText().toString(), editTextPass.getText().toString()).execute();
+
 
         buttonEnter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
                     goToFunctionActivity(view);
                 }
 
-//                RegistrationActivity.bithDate = new GregorianCalendar();
-//                RegistrationActivity.bithDate.set(Calendar.DAY_OF_MONTH, 28);
-//                RegistrationActivity.bithDate.set(Calendar.MONTH, 3);
-//                RegistrationActivity.bithDate.set(Calendar.YEAR, 2001);
-//                acc = new Account(1234123412341234l,"147" , "123" , "Igor", "Bilou", RegistrationActivity.bithDate, 111111, 222222, 333333);
+                RegistrationActivity.bithDate = new GregorianCalendar();
+                RegistrationActivity.bithDate.set(Calendar.DAY_OF_MONTH, 28);
+                RegistrationActivity.bithDate.set(Calendar.MONTH, 3);
+                RegistrationActivity.bithDate.set(Calendar.YEAR, 2001);
+                acc = new Account(1234123412341234l,"147" , "123" , "Igor", "Bilou", RegistrationActivity.bithDate, 111111, 222222, 333333);
 
-
+                //goConnectToDB();
 
 
 
@@ -75,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
                 goToRegistrationActivity(view);
             }
         });
+    }
+
+    private void goConnectToDB() {
+        new DBUpMobBank(this, editTextPhone.getText().toString(), editTextPass.getText().toString()).execute();
     }
 
 //    private void errorPhone(String text){
