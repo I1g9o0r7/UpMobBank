@@ -56,6 +56,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Enter number or code"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
